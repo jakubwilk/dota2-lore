@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../static/images/logo.svg'
 import styles from './App.module.scss'
+import { Button } from 'antd'
 
 export const App = () => {
     return (
@@ -19,6 +20,7 @@ export const App = () => {
                 >
                     {'Learn React'}
                 </a>
+                <Button size={'large'}>{'Antd Custom Button'}</Button>
             </header>
         </div>
     )
