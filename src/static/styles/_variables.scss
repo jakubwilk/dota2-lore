@@ -1,0 +1,29 @@
+$base-color: '#d0d1d3';
+$primary-color: '#ff6046';
+
+$white-color: '#ffffff';
+$light-color: '#f3f3f3';
+$black-color: '#000000';
+$dark-color: '#2b2b2b';
+
+$rubik-font: 'Rubik', sans-serif;
+$bitter-font: 'Bitter', serif;
+
+$font-regular-weight: 400;
+$font-medium-weight: 500;
+$font-bold-weight: 600;
+
+$font-normal-style: normal;
+$font-italic-style: italic;
+
+$base-size: 16px;
+$base-border-width: 1px;
+$base-border-radius: 4px;
+
+$responsive-breakpoints: (
+    'mobile': 576px,
+    'tablet': 768px,
+    'notebook': 992px,
+    'laptop': 1200px,
+    'desktop': 1600px,
+);
