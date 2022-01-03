@@ -22,6 +22,7 @@ This project is using [Create React App](https://github.com/facebook/create-reac
 6. [Axios](https://github.com/axios/axios), I don't feel like I need to use React-Query. I want it, but I think this is not a project, where RQ would be good, or I would be able to use 100% of RQ.
 7. Google Fonts, because defaults are ugly as &#$%
 8. [Strapi](https://strapi.io) for content management, and it's first time when I am using it
+9. [Trello board](https://trello.com/b/v2FwyS2t/dota2-fan-made-lore) to organize work
 
 ## Command palette
 
