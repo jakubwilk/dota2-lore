@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../static/images/logo.svg'
+import logo from '../static/images/dota2_logo.png'
 import styles from './App.module.scss'
 import { Button } from 'antd'
 

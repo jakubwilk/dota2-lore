@@ -1,3 +1,9 @@
+<div align="center">
+<a href="https://www.dota2.com/home" title="Dota2 homepage">
+<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/footer_logo.png" alt="Dota2 logo" />
+</a>
+</div>
+
 # Dota2 Lore
 
 Not everyone but small group of people, who plays in Dota2 and really likes the story part of each hero, they know that Dota2 has... really messed lore. This project is a complex website which is filled a custom Dota2 lore with custom heroes stories, regions descriptions and additional stuffs added by me, for fun.
@@ -19,15 +25,15 @@ This project is using [Create React App](https://github.com/facebook/create-reac
 
 ## Command palette
 
-### `craco start`
+### `yarn start`
 
 Runs the app in the development mode.
 
-### `craco test`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.
 
-### `craco build`
+### `yarn build`
 
 Builds the app for production to the `build` folder.
 
@@ -36,3 +42,7 @@ Builds the app for production to the `build` folder.
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+<div align="right">
+<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/valve_logo.png" alt="Valve logo" />
+</div>
