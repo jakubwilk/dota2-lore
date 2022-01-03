@@ -1,11 +1,99 @@
 @import 'variables';
 
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+}
+
+@mixin flex-center-horiz {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin font-face($name, $style, $weight, $path) {
-  @font-face {
-    font-family: $name;
-    font-weight: $weight;
-    font-style: $style;
-    src: url('#{$path}.ttf') format('truetype'),
-    url('#{$path}.woff') format('woff');
-  }
+    @font-face {
+        font-family: $name;
+        font-weight: $weight;
+        font-style: $style;
+        src: url('#{$path}.ttf') format('truetype'), url('#{$path}.woff') format('woff');
+    }
+}
+
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin media($width, $type: min) {
+    @if map_has_key($responsive-breakpoints, $width) {
+        $width: map_get($responsive-breakpoints, $width);
+
+        @if $type == max {
+            $width: $width - 1px;
+        }
+
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin mx($left, $right: $left) {
+    margin-left: $left;
+    margin-right: $right;
+}
+
+@mixin my($top, $bottom: $top) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+@mixin px($left, $right: $left) {
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin py($top, $bottom: $top) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin truncate() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
