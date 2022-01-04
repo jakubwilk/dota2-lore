@@ -4,8 +4,10 @@ import { HomePage } from './pages/home/Home'
 
 export const App = () => {
     return (
-        <Routes>
-            <Route path={'/'} element={<HomePage />} />
-        </Routes>
+        <React.Suspense fallback={'loading'}>
+            <Routes>
+                <Route path={'/'} element={<HomePage />} />
+            </Routes>
+        </React.Suspense>
     )
 }

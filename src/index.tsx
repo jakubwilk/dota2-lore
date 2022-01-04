@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { App } from './app/App'
 import reportWebVitals from './reportWebVitals'
+import './i18next'
 import 'antd/dist/antd.less'
 import './index.scss'
 
