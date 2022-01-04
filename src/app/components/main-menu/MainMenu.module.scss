@@ -1,106 +1,106 @@
 @import 'src/static/styles/helpers';
 
 .menu {
-  display: flex;
-  justify-content: flex-start;
-  @include box(auto, 75px);
-  list-style: none;
-  @include px(0);
-  @include my(0);
-  background-color: $dark-color;
+    display: flex;
+    justify-content: flex-start;
+    @include box(auto, 75px);
+    list-style: none;
+    @include px(0);
+    @include my(0);
+    background-color: $dark-color;
 }
 
 .menuItem {
-  position: relative;
-  @include box(auto, inherit);
+    position: relative;
+    @include box(auto, inherit);
 }
 
 .menuSubMenu {
-  //display: none;
-  position: absolute;
-  top: 85px;
-  left: 0;
-  z-index: 20;
-  background-color: $dark-color;
-  list-style: none;
-  min-width: 200px;
-  @include px(0);
-  @include py(.5rem);
-  @include my(0);
+    //display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    z-index: 20;
+    background-color: $dark-color;
+    list-style: none;
+    min-width: 200px;
+    @include px(0);
+    @include py(0.5rem);
+    @include my(0);
 }
 
 .menuSubMenuItem {
-  position: relative;
-  display: block;
-  @include box(100%, auto);
+    position: relative;
+    display: block;
+    @include box(100%, auto);
 }
 
 .menuLink {
-  position: relative;
-  @include flex-center-vert();
-  color: $white-color;
-  font-family: $inknut-antiqua-font;
-  font-size: .7rem;
-  @include px(1rem);
-  @include box(auto, inherit);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  opacity: .7;
-  transition: opacity .2s ease-in, height .2s ease-in;
-
-  &:hover,
-  &:focus {
+    position: relative;
+    @include flex-center-vert();
     color: $white-color;
-    opacity: 1;
-  }
+    font-family: $inknut-antiqua-font;
+    font-size: 0.7rem;
+    @include px(1rem);
+    @include box(auto, inherit);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in, height 0.2s ease-in;
 
-  & > span {
-    @include mx(.5rem, 0);
-  }
+    &:hover,
+    &:focus {
+        color: $white-color;
+        opacity: 1;
+    }
+
+    & > span {
+        @include mx(0.5rem, 0);
+    }
 }
 
 .menuSubMenuLink {
-  display: block;
-  @include box(inherit);
-  @include px(1rem);
-  @include py(.75rem);
-  font-family: $inknut-antiqua-font;
-  font-size: .7rem;
-  color: $white-color;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  opacity: .7;
-  transition: opacity .2s ease-in;
-
-  &:hover,
-  &:focus {
+    display: block;
+    @include box(inherit);
+    @include px(1rem);
+    @include py(0.75rem);
+    font-family: $inknut-antiqua-font;
+    font-size: 0.7rem;
     color: $white-color;
-    opacity: 1;
-  }
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in;
+
+    &:hover,
+    &:focus {
+        color: $white-color;
+        opacity: 1;
+    }
 }
 
 .menuActiveLink {
-  color: $primary-color !important;
-  opacity: 1;
+    color: $primary-color !important;
+    opacity: 1;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    @include box(100%, 3px);
-    background-color: $primary-color;
-  }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include box(100%, 3px);
+        background-color: $primary-color;
+    }
 }
 
 .menuActiveSubLink {
-  color: $primary-color !important;
-  opacity: 1;
+    color: $primary-color !important;
+    opacity: 1;
 }
 
 .menuDisabledLink {
-  @include truncate();
-    opacity: .4;
-  pointer-events: none;
-  user-select: none;
+    @include truncate();
+    opacity: 0.4;
+    pointer-events: none;
+    user-select: none;
 }

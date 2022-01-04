@@ -1,14 +1,14 @@
 {
-  "MainMenuHeroesText": "Bohaterowie",
-  "MainMenuHeroesTitleText": "Przejdź do listy wszystkich bohaterów",
-  "MainMenuHomeText": "Strona główna",
-  "MainMenuHomeTitleText": "Powrót na stronę główną",
-  "MainMenuRacesDrowText": "Mroczne Elfy",
-  "MainMenuRacesDrowTitleText": "Przejdź do opisu rasy mrocznych elfów",
-  "MainMenuRacesOrcText": "Orkowie",
-  "MainMenuRacesOrcTitleText": "Przejdź do opisu rasy orków",
-  "MainMenuRacesText": "Rasy",
-  "MainMenuRacesTitleText": "Przejdź do listy wszystkich ras",
-  "MainMenuRegionsText": "Regiony",
-  "MainMenuRegionsTitleText": "Przejdź do spisu wszystkich krain"
+    "MainMenuHeroesText": "Bohaterowie",
+    "MainMenuHeroesTitleText": "Przejdź do listy wszystkich bohaterów",
+    "MainMenuHomeText": "Strona główna",
+    "MainMenuHomeTitleText": "Powrót na stronę główną",
+    "MainMenuRacesDrowText": "Mroczne Elfy",
+    "MainMenuRacesDrowTitleText": "Przejdź do opisu rasy mrocznych elfów",
+    "MainMenuRacesOrcText": "Orkowie",
+    "MainMenuRacesOrcTitleText": "Przejdź do opisu rasy orków",
+    "MainMenuRacesText": "Rasy",
+    "MainMenuRacesTitleText": "Przejdź do listy wszystkich ras",
+    "MainMenuRegionsText": "Regiony",
+    "MainMenuRegionsTitleText": "Przejdź do spisu wszystkich krain"
 }
