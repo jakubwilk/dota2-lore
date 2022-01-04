@@ -1,0 +1,66 @@
+@import 'src/static/styles/helpers';
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  @include box(auto, 60px);
+  list-style: none;
+  @include px(0);
+  @include my(0);
+  background-color: $dark-color;
+}
+
+.menuItem {
+  position: relative;
+  @include box(auto, inherit);
+}
+
+.menuSubMenu {
+  //display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  list-style: none;
+  @include px(0);
+  @include my(0);
+}
+
+.menuSubMenuItem {}
+
+.menuLink {
+  position: relative;
+  @include flex-center-vert();
+  color: $white-color;
+  font-family: $inknut-antiqua-font;
+  font-size: .85rem;
+  @include px(1rem);
+  @include box(auto, inherit);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: $font-bold-weight;
+  opacity: .7;
+  transition: opacity .2s ease-in, height .2s ease-in;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    opacity: 1;
+  }
+}
+
+.menuSubMenuLink {}
+
+.menuActiveLink {
+  color: $primary-color !important;
+  opacity: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include box(100%, 3px);
+    background-color: $primary-color;
+  }
+}
