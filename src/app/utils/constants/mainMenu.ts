@@ -14,7 +14,7 @@ export const appMenu: TMainMenu = [
         href: '/heroes',
         nameKey: 'MainMenuHeroesText',
         titleKey: 'MainMenuHeroesTitleText',
-        isDisable: false,
+        isDisable: true,
         isEnable: true,
     },
     {
@@ -49,6 +49,6 @@ export const appMenu: TMainMenu = [
         nameKey: 'MainMenuRegionsText',
         titleKey: 'MainMenuRegionsTitleText',
         isDisable: false,
-        isEnable: false,
+        isEnable: true,
     },
 ]

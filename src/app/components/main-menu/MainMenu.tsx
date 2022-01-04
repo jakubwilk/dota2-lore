@@ -1,11 +1,25 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { appMenu } from '../../utils/constants/mainMenu'
 import styles from './MainMenu.module.scss'
+import { CaretDownOutlined } from '@ant-design/icons'
 
 export const MainMenu = () => {
     const { t } = useTranslation()
+
+    const createLinkClassName = (
+        isActive: boolean,
+        isDisabled: boolean,
+        linkClassName: string,
+        activeLinkClassName: string
+    ): string => {
+        if (isDisabled) return `${linkClassName} ${styles.menuDisabledLink}`
+
+        if (isActive) return `${linkClassName} ${activeLinkClassName}`
+
+        return linkClassName
+    }
 
     return (
         <ul className={styles.menu}>
@@ -17,12 +31,16 @@ export const MainMenu = () => {
                                 to={menuItem.href}
                                 title={t(menuItem.titleKey)}
                                 className={(navData) =>
-                                    navData.isActive
-                                        ? `${styles.menuLink} ${styles.menuActiveLink}`
-                                        : styles.menuLink
+                                    createLinkClassName(
+                                        navData.isActive,
+                                        menuItem.isDisable,
+                                        styles.menuLink,
+                                        styles.menuActiveLink
+                                    )
                                 }
                             >
                                 {t(menuItem.nameKey)}
+                                {menuItem.subMenu ? <CaretDownOutlined /> : null}
                             </NavLink>
                             {menuItem.subMenu ? (
                                 <ul className={styles.menuSubMenu}>
@@ -35,9 +53,12 @@ export const MainMenu = () => {
                                                 to={subMenuItem.href}
                                                 title={t(subMenuItem.titleKey)}
                                                 className={(navData) =>
-                                                    navData.isActive
-                                                        ? `${styles.menuSubMenuLink} ${styles.menuActiveLink}`
-                                                        : styles.menuSubMenuLink
+                                                    createLinkClassName(
+                                                        navData.isActive,
+                                                        menuItem.isDisable,
+                                                        styles.menuSubMenuLink,
+                                                        styles.menuActiveSubLink
+                                                    )
                                                 }
                                             >
                                                 {t(subMenuItem.nameKey)}
