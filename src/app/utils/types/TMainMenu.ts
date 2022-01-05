@@ -5,7 +5,10 @@ export type TMainMenuItem = {
     titleKey: string
     isDisable: boolean
     isEnable: boolean
-    subMenu?: TMainMenuItem[]
 }
 
-export type TMainMenu = TMainMenuItem[]
+export type TMainMenu = {
+    key: number
+    categoryKey: string
+    menu: TMainMenuItem[]
+}

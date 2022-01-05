@@ -1,32 +1,62 @@
 import { TMainMenu } from '../types/TMainMenu'
 
-export const appMenu: TMainMenu = [
+export const appMenu: TMainMenu[] = [
     {
         key: 1,
-        href: '/',
-        nameKey: 'MainMenuHomeText',
-        titleKey: 'MainMenuHomeTitleText',
-        isDisable: false,
-        isEnable: true,
+        categoryKey: 'MainMenuCategoryDefaultText',
+        menu: [
+            {
+                key: 1,
+                href: '/',
+                nameKey: 'MainMenuHomeText',
+                titleKey: 'MainMenuHomeTitleText',
+                isDisable: false,
+                isEnable: true,
+            },
+        ],
     },
     {
         key: 2,
-        href: '/heroes',
-        nameKey: 'MainMenuHeroesText',
-        titleKey: 'MainMenuHeroesTitleText',
-        isDisable: true,
-        isEnable: true,
+        categoryKey: 'MainMenuCategoryWorldText',
+        menu: [
+            {
+                key: 1,
+                href: '/regions/valoran',
+                nameKey: 'MainMenuRegionsValoranText',
+                titleKey: 'MainMenuRegionsValoranTitleText',
+                isDisable: false,
+                isEnable: true,
+            },
+        ],
     },
     {
         key: 3,
-        href: '/races',
-        nameKey: 'MainMenuRacesText',
-        titleKey: 'MainMenuRacesTitleText',
-        isDisable: false,
-        isEnable: true,
-        subMenu: [
+        categoryKey: 'MainMenuCategoryCharactersText',
+        menu: [
             {
-                key: 4,
+                key: 1,
+                href: '/heroes',
+                nameKey: 'MainMenuHeroesText',
+                titleKey: 'MainMenuHeroesTitleText',
+                isDisable: true,
+                isEnable: true,
+            },
+        ],
+    },
+    {
+        key: 4,
+        categoryKey: 'MainMenuCategoryRacesText',
+        menu: [
+            {
+                key: 1,
+                href: '/races',
+                nameKey: 'MainMenuRacesText',
+                titleKey: 'MainMenuRacesTitleText',
+                isDisable: false,
+                isEnable: true,
+            },
+            {
+                key: 2,
                 href: '/races/orc',
                 nameKey: 'MainMenuRacesOrcText',
                 titleKey: 'MainMenuRacesOrcTitleText',
@@ -34,7 +64,7 @@ export const appMenu: TMainMenu = [
                 isEnable: true,
             },
             {
-                key: 5,
+                key: 3,
                 href: '/races/drow',
                 nameKey: 'MainMenuRacesDrowText',
                 titleKey: 'MainMenuRacesDrowTitleText',
@@ -42,13 +72,5 @@ export const appMenu: TMainMenu = [
                 isEnable: true,
             },
         ],
-    },
-    {
-        key: 6,
-        href: '/regions',
-        nameKey: 'MainMenuRegionsText',
-        titleKey: 'MainMenuRegionsTitleText',
-        isDisable: false,
-        isEnable: true,
     },
 ]
