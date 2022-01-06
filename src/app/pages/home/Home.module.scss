@@ -1,0 +1,10 @@
+@import 'src/static/styles/helpers';
+
+.home {
+  background-image: url('../../../static/images/home-bakcground.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  @include py(110px, 0);
+}

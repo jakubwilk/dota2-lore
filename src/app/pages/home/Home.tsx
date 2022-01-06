@@ -1,17 +1,11 @@
-import React, { useContext } from 'react'
-import { NavigationContext } from '../../context/NavigationContext'
+import React from 'react'
+import { IHomeProps } from '../../utils/interfaces/IHome'
+import styles from './Home.module.scss'
 
-export const HomePage = () => {
-    const { setContextStateValue } = useContext(NavigationContext)
-
-    const handleOpenMenu = (e: React.MouseEvent<HTMLButtonElement>) => {
-        setContextStateValue<boolean>('isMainNavigationActive', true)
-    }
-
+export const HomePage = ({}: IHomeProps) => {
     return (
-        <React.Fragment>
-            <p>{'Home page'}</p>
-            <button onClick={(e) => handleOpenMenu(e)}>{'Open menu'}</button>
-        </React.Fragment>
+        <div className={styles.home}>
+            <span>{'Home page'}</span>
+        </div>
     )
 }

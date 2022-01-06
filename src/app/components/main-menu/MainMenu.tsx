@@ -50,7 +50,7 @@ export const MainMenu = () => {
                 onClick={(e) => handleCloseNavigationPanel(e)}
             >
                 <DoubleRightOutlined />
-                {'Close'}
+                {t('ButtonCloseMainMenuText')}
             </button>
         </aside>
     )

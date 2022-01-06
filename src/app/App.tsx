@@ -5,6 +5,7 @@ import { MainMenu } from './components/main-menu/MainMenu'
 import { NavigationContext } from './context/NavigationContext'
 import styles from './App.module.scss'
 import { Helmet } from 'react-helmet-async'
+import { Header } from './components/header/Header'
 
 export const App = () => {
     const { state } = React.useContext(NavigationContext)
@@ -17,6 +18,7 @@ export const App = () => {
             </Helmet>
             <MainMenu />
             <main className={isMainNavigationActive ? styles.panelNavigationActive : styles.app}>
+                <Header />
                 <Routes>
                     <Route path={'/'} element={<HomePage />} />
                 </Routes>

@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: $dark-color;
+    background-color: darken($dark-color, 15);
     @include box(350px, 100%);
     @include flex-column();
     justify-content: space-between;
@@ -96,7 +96,7 @@
     text-transform: uppercase;
     border: 0;
     color: $white-color;
-    background-color: $dark-color;
+    background-color: transparent;
     cursor: pointer;
     transition: color 0.05s ease-in-out, background-color 0.05s ease-in-out;
 

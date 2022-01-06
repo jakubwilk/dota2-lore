@@ -1,8 +1,19 @@
 @import 'src/static/styles/helpers';
 
 .panelNavigationActive {
+    position: relative;
     transform: translateX(-350px);
     transition-duration: 0.1s;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 75;
+        @include box(100vw, 100vh);
+        background-color: rgba($dark-color, .35);
+    }
 }
 
 .app {
