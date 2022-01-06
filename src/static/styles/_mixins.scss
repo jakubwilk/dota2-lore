@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import 'variables';
 
 @mixin box($width, $height: $width) {
@@ -29,6 +30,11 @@
 @mixin flex-column {
     display: flex;
     flex-direction: column;
+}
+
+@mixin font-size($size, $base: 16) {
+    font-size: $size;
+    font-size: math.div($size, $base) * 1rem;
 }
 
 @mixin input-placeholder {
@@ -71,6 +77,12 @@
 @mixin my($top, $bottom: $top) {
     margin-top: $top;
     margin-bottom: $bottom;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity = $opacity-ie);
 }
 
 @mixin px($left, $right: $left) {

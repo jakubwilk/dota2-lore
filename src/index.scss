@@ -1,9 +1,21 @@
 //@import 'static/styles/fonts';
 @import 'src/static/styles/helpers.scss';
 
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
 body {
     margin: 0;
-    font-family: $rubik-font;
+    font-family: $poppins-font;
+    font-weight: $font-regular-weight;
+    @include font-size(16);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
