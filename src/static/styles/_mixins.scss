@@ -33,7 +33,7 @@
 }
 
 @mixin font-size($size, $base: 16) {
-    font-size: $size;
+    font-size: $size * 1px;
     font-size: math.div($size, $base) * 1rem;
 }
 

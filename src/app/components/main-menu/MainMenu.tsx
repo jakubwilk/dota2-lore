@@ -1,10 +1,11 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { NavigationContext } from '../../context/NavigationContext'
+import { DoubleRightOutlined } from '@ant-design/icons'
 import { Menu } from '../shared/menu/Menu'
 import { MenuItem } from '../shared/menu/MenuItem'
 import { appMenu } from '../../utils/constants/mainMenu'
 import styles from './MainMenu.module.scss'
-import { NavigationContext } from '../../context/NavigationContext'
 
 export const MainMenu = () => {
     const { t } = useTranslation()
@@ -44,7 +45,13 @@ export const MainMenu = () => {
                     </React.Fragment>
                 ))}
             </Menu>
-            <button onClick={(e) => handleCloseNavigationPanel(e)}>{'Close'}</button>
+            <button
+                className={styles.menuButtonClose}
+                onClick={(e) => handleCloseNavigationPanel(e)}
+            >
+                <DoubleRightOutlined />
+                {'Close'}
+            </button>
         </aside>
     )
 }

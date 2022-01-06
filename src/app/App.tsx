@@ -16,7 +16,7 @@ export const App = () => {
                 <body data-navigation-active={state.isMainNavigationActive ? 'true' : 'false'} />
             </Helmet>
             <MainMenu />
-            <main className={isMainNavigationActive ? styles.panelNavigationActive : ''}>
+            <main className={isMainNavigationActive ? styles.panelNavigationActive : styles.app}>
                 <Routes>
                     <Route path={'/'} element={<HomePage />} />
                 </Routes>

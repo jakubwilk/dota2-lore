@@ -27,3 +27,12 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+a,
+button,
+input,
+textarea {
+    font-family: $poppins-font;
+    font-weight: $font-regular-weight;
+    @include font-size(16);
+}
