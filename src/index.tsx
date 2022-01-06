@@ -1,16 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import { NavigationProvider } from './app/context/NavigationContext'
 import { App } from './app/App'
 import reportWebVitals from './reportWebVitals'
-import 'antd/dist/antd.less'
+import './i18next'
 import './index.scss'
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <HelmetProvider>
+            <BrowserRouter>
+                <NavigationProvider>
+                    <App />
+                </NavigationProvider>
+            </BrowserRouter>
+        </HelmetProvider>
     </React.StrictMode>,
     document.getElementById('root')
 )

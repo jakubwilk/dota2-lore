@@ -1,9 +1,11 @@
 import React from 'react'
+import { IHomeProps } from '../../utils/interfaces/IHome'
+import styles from './Home.module.scss'
 
-export const HomePage = () => {
+export const HomePage = ({}: IHomeProps) => {
     return (
-        <React.Fragment>
-            <p>{'Home page'}</p>
-        </React.Fragment>
+        <div className={styles.home}>
+            <span>{'Home page'}</span>
+        </div>
     )
 }

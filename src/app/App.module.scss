@@ -1,38 +1,21 @@
-.App {
-    text-align: center;
-}
+@import 'src/static/styles/helpers';
 
-.AppLogo {
-    height: 40vmin;
-    pointer-events: none;
-}
+.panelNavigationActive {
+    position: relative;
+    transform: translateX(-350px);
+    transition-duration: 0.1s;
 
-@media (prefers-reduced-motion: no-preference) {
-    .AppLogo {
-        animation: App-logo-spin infinite 20s linear;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 75;
+        @include box(100vw, 100vh);
+        background-color: rgba($dark-color, .35);
     }
 }
 
-.AppHeader {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.AppLink {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.app {
+    transition-duration: 0.1s;
 }

@@ -1,0 +1,20 @@
+{
+    "ButtonCloseMainMenuText": "Zamknij menu",
+    "ButtonOpenMainMenuText": "Otwórz menu",
+    "MainMenuCategoryCharactersText": "Postacie",
+    "MainMenuCategoryDefaultText": "Główne",
+    "MainMenuCategoryRacesText": "Rasy",
+    "MainMenuCategoryWorldText": "Świat",
+    "MainMenuCharactersHeroesText": "Bohaterowie",
+    "MainMenuCharactersHeroesTitleText": "Przejdź do listy bohaterów",
+    "MainMenuCharactersNeutralText": "Neutralne",
+    "MainMenuCharactersNeutralTitleText": "Przejdź do listy postaci neutralnych",
+    "MainMenuCharactersText": "Wszystkie postacie",
+    "MainMenuCharactersTitleText": "Przejdź do listy wszystkich postaci",
+    "MainMenuHomeText": "Strona główna",
+    "MainMenuHomeTitleText": "Powrót na stronę główną",
+    "MainMenuRacesText": "Wszystkie rasy",
+    "MainMenuRacesTitleText": "Przejdź do listy wszystkich ras",
+    "MainMenuRegionsText": "Regiony",
+    "MainMenuRegionsTitleText": "Przejdź do spisu wszystkich krain"
+}

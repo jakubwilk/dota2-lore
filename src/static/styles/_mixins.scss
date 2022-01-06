@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import 'variables';
 
 @mixin box($width, $height: $width) {
@@ -31,13 +32,9 @@
     flex-direction: column;
 }
 
-@mixin font-face($name, $style, $weight, $path) {
-    @font-face {
-        font-family: $name;
-        font-weight: $weight;
-        font-style: $style;
-        src: url('#{$path}.ttf') format('truetype'), url('#{$path}.woff') format('woff');
-    }
+@mixin font-size($size, $base: 16) {
+    font-size: $size * 1px;
+    font-size: math.div($size, $base) * 1rem;
 }
 
 @mixin input-placeholder {
@@ -80,6 +77,12 @@
 @mixin my($top, $bottom: $top) {
     margin-top: $top;
     margin-bottom: $bottom;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity = $opacity-ie);
 }
 
 @mixin px($left, $right: $left) {

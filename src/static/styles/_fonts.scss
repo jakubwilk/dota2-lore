@@ -1,64 +1,50 @@
 @import 'variables';
 @import 'mixins';
 
-@include font-face(
-    $rubik-font,
-    $font-normal-style,
-    $font-regular-weight,
-    './../fonts/rubik/Rubik-Regular'
-);
-@include font-face(
-    $rubik-font,
-    $font-italic-style,
-    $font-regular-weight,
-    './../fonts/rubik/Rubik-Italic'
-);
-@include font-face(
-    $rubik-font,
-    $font-normal-style,
-    $font-bold-weight,
-    './../fonts/rubik/Rubik-Bold'
-);
-@include font-face(
-    $rubik-font,
-    $font-italic-style,
-    $font-bold-weight,
-    './../fonts/rubik/Rubik-BoldItalic'
-);
+@font-face {
+    font-family: $rubik-font;
+    font-weight: $font-regular-weight;
+    font-style: $font-normal-style;
+    src: url('./../fonts/rubik/Rubik-Regular.ttf') format('truetype'),
+        url('./../fonts/rubik/Rubik-Regular.woff') format('woff');
+}
 
-@include font-face(
-    $bitter-font,
-    $font-normal-style,
-    $font-regular-weight,
-    './../fonts/bitter/Bitter-Regular'
-);
-@include font-face(
-    $bitter-font,
-    $font-italic-style,
-    $font-regular-weight,
-    './../fonts/bitter/Bitter-Italic'
-);
-@include font-face(
-    $bitter-font,
-    $font-normal-style,
-    $font-medium-weight,
-    './../fonts/bitter/Bitter-Medium'
-);
-@include font-face(
-    $bitter-font,
-    $font-italic-style,
-    $font-medium-weight,
-    './../fonts/bitter/Bitter-MediumItalic'
-);
-@include font-face(
-    $bitter-font,
-    $font-normal-style,
-    $font-bold-weight,
-    './../fonts/bitter/Bitter-Bold'
-);
-@include font-face(
-    $bitter-font,
-    $font-italic-style,
-    $font-bold-weight,
-    './../fonts/bitter/Bitter-BoldItalic'
-);
+@font-face {
+    font-family: $rubik-font;
+    font-weight: $font-regular-weight;
+    font-style: $font-italic-style;
+    src: url('./../fonts/rubik/Rubik-Italic.ttf') format('truetype'),
+        url('./../fonts/rubik/Rubik-Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: $rubik-font;
+    font-weight: $font-bold-weight;
+    font-style: $font-normal-style;
+    src: url('./../fonts/rubik/Rubik-Bold.ttf') format('truetype'),
+        url('./../fonts/rubik/Rubik-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: $rubik-font;
+    font-weight: $font-bold-weight;
+    font-style: $font-italic-style;
+    src: url('./../fonts/rubik/Rubik-BoldItalic.ttf') format('truetype'),
+        url('./../fonts/rubik/Rubik-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: $inknut-antiqua-font;
+    font-weight: $font-regular-weight;
+    font-style: $font-normal-style;
+    src: url('./../fonts/inknutantiqua/InknutAntiqua-Regular.ttf') format('truetype'),
+        url('./../fonts/inknutantiqua/InknutAntiqua-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: $inknut-antiqua-font;
+    font-weight: $font-bold-weight;
+    font-style: $font-normal-style;
+    src: url('./../fonts/inknutantiqua/InknutAntiqua-Bold.ttf') format('truetype'),
+        url('./../fonts/inknutantiqua/InknutAntiqua-Bold.woff') format('woff');
+}

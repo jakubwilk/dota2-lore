@@ -1,0 +1,117 @@
+@import 'src/static/styles/helpers';
+
+.panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: darken($dark-color, 15);
+    @include box(350px, 100%);
+    @include flex-column();
+    justify-content: space-between;
+    max-height: 100vh;
+    min-height: 100vh;
+    @include py(2rem, 0);
+    overflow-y: auto;
+    z-index: 100;
+    transform: translateX(350px);
+    transition-duration: 0.1s;
+}
+
+.panelActive {
+    transform: translateX(0);
+}
+
+.menu {
+    display: block;
+    list-style: none;
+    @include px(0);
+    @include my(0);
+}
+
+.menuSeparator {
+    color: $base-color;
+    user-select: none;
+    font-weight: $font-bold-weight;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include font-size(14);
+    @include opacity(0.4);
+    @include my(0.75rem, 0.2rem);
+    @include px(1rem);
+
+    &:first-child {
+        @include my(0, 0.2rem);
+    }
+}
+
+.menuItem {
+    @include my(0, 0.1rem);
+    @include mx(1rem);
+}
+
+.menuLink {
+    display: block;
+    color: $white-color;
+    text-decoration: none;
+    letter-spacing: 1px;
+    @include font-size(14);
+    font-weight: $font-light-weight;
+    @include px(1rem);
+    @include py(0.7rem);
+    transition: color 0.05s ease-in-out, background-color 0.05s ease-in-out;
+
+    &[data-disable='true'] {
+        @include opacity(0.6);
+        user-select: none;
+        pointer-events: none;
+    }
+
+    &:hover,
+    &:focus {
+        color: $primary-color;
+        outline: none;
+        border: none;
+    }
+}
+
+.menuActiveLink {
+    color: $white-color;
+    background-color: $primary-color;
+    border-radius: 6px;
+
+    &:hover,
+    &:focus {
+        color: $white-color;
+    }
+}
+
+.menuButtonClose {
+    @include flex-center-vert();
+    justify-content: space-between;
+    @include box(100%, 50px);
+    @include my(1rem, 0);
+    @include px(0, 1.5rem);
+    @include font-size(14);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0;
+    color: $white-color;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.05s ease-in-out, background-color 0.05s ease-in-out;
+
+    & > span:first-child {
+        @include flex-center();
+        background-color: $primary-color;
+        color: $white-color;
+        @include box(50px);
+        @include font-size(21);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $primary-color;
+        outline: none;
+        border: none;
+    }
+}
