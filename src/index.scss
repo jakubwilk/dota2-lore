@@ -18,6 +18,10 @@ body {
     @include font-size(16);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    &[data-navigation-active='true'] {
+        overflow: hidden;
+    }
 }
 
 code {

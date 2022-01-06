@@ -4,7 +4,6 @@ import {
     INavigationContextData,
     INavigationContextProvider,
 } from '../utils/interfaces/INavigationContext'
-import { TNavigationContextPropertyNameMap } from '../utils/types/TNavigationContext'
 
 const defaultContextState: INavigationContextData = {
     isMainNavigationActive: false,
@@ -13,9 +12,9 @@ const defaultContextState: INavigationContextData = {
 export const NavigationContext = React.createContext<INavigationContext>({
     state: defaultContextState,
     resetContextState: () => {},
-    setContextStateValue: (
-        contextPropertyName: keyof TNavigationContextPropertyNameMap,
-        value: number | string | boolean | undefined | null
+    setContextStateValue: <T extends number | string | boolean | undefined | null>(
+        contextPropertyName: string,
+        value: T
     ) => {},
 })
 
@@ -23,19 +22,22 @@ export const NavigationProvider = ({ children }: INavigationContextProvider) => 
     const [contextState, setContextState] =
         React.useState<INavigationContextData>(defaultContextState)
 
-    const setContextStateValue = (
-        contextPropertyName: keyof TNavigationContextPropertyNameMap,
-        value: number | string | boolean | undefined | null
-    ) => {
-        setContextState((prevState) => ({
-            ...prevState,
-            [contextPropertyName]: value,
-        }))
-    }
+    const setContextStateValue = React.useCallback(
+        <T extends number | string | boolean | undefined | null>(
+            contextPropertyName: string,
+            value: T
+        ) => {
+            setContextState((prevState) => ({
+                ...prevState,
+                [contextPropertyName]: value,
+            }))
+        },
+        []
+    )
 
-    const resetContextState = () => {
+    const resetContextState = React.useCallback(() => {
         setContextState(defaultContextState)
-    }
+    }, [])
 
     return (
         <NavigationContext.Provider

@@ -59,7 +59,7 @@
     transition: color .05s ease-in-out, background-color .05s ease-in-out;
 
 
-    &[data-disable=true] {
+    &[data-disable='true'] {
         @include opacity(.6);
         user-select: none;
         pointer-events: none;

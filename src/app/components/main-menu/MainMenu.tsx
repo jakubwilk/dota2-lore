@@ -4,12 +4,23 @@ import { Menu } from '../shared/menu/Menu'
 import { MenuItem } from '../shared/menu/MenuItem'
 import { appMenu } from '../../utils/constants/mainMenu'
 import styles from './MainMenu.module.scss'
+import { NavigationContext } from '../../context/NavigationContext'
 
 export const MainMenu = () => {
     const { t } = useTranslation()
+    const { state, setContextStateValue } = React.useContext(NavigationContext)
+
+    const buildPanelClassName = (): string => {
+        if (state.isMainNavigationActive) return `${styles.panel} ${styles.panelActive}`
+        return styles.panel
+    }
+
+    const handleCloseNavigationPanel = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setContextStateValue('isMainNavigationActive', false)
+    }
 
     return (
-        <aside className={styles.panel}>
+        <aside className={buildPanelClassName()}>
             <Menu className={styles.menu}>
                 {appMenu.map((menuSection, index) => (
                     <React.Fragment key={menuSection.key}>
@@ -33,6 +44,7 @@ export const MainMenu = () => {
                     </React.Fragment>
                 ))}
             </Menu>
+            <button onClick={(e) => handleCloseNavigationPanel(e)}>{'Close'}</button>
         </aside>
     )
 }
