@@ -24,6 +24,7 @@
         "strict": ["error", "global"],
         "prettier/prettier": "error",
         "react/jsx-curly-brace-presence": ["error", { "props": "always", "children": "always" }],
-        "@typescript-eslint/no-empty-interface": 0
+        "@typescript-eslint/no-empty-interface": 0,
+        "@typescript-eslint/no-empty-function": 0
     }
 }

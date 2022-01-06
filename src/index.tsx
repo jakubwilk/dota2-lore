@@ -5,11 +5,14 @@ import { App } from './app/App'
 import reportWebVitals from './reportWebVitals'
 import './i18next'
 import './index.scss'
+import { NavigationProvider } from './app/context/NavigationContext'
 
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App />
+            <NavigationProvider>
+                <App />
+            </NavigationProvider>
         </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
