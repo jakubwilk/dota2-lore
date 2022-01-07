@@ -6,6 +6,7 @@ import { NavigationContext } from '../../context/NavigationContext'
 import { IHeaderProps } from '../../utils/interfaces/IHeader'
 import dota2Logo from './../../../static/images/dota2_logo.png'
 import styles from './Header.module.scss'
+import { Container } from '../container/Container'
 
 export const Header = ({}: IHeaderProps) => {
     const { t } = useTranslation()
@@ -17,15 +18,19 @@ export const Header = ({}: IHeaderProps) => {
 
     return (
         <header className={styles.header}>
-            <h1 className={styles.title}>
-                <Link className={styles.titleLink} to={'/'}>
-                    <img className={styles.logo} src={dota2Logo} alt={'Logo Dota2'} />
-                </Link>
-            </h1>
-            <button className={styles.menuButton} onClick={(e) => handleOpenMenu(e)}>
-                <MenuOutlined />
-                {t('ButtonOpenMainMenuText')}
-            </button>
+            <Container isFullWidth={true} inheritContainerHeight={true}>
+                <div className={styles.row}>
+                    <h1 className={styles.title}>
+                        <Link className={styles.titleLink} to={'/'}>
+                            <img className={styles.logo} src={dota2Logo} alt={'Logo Dota2'} />
+                        </Link>
+                    </h1>
+                    <button className={styles.menuButton} onClick={(e) => handleOpenMenu(e)}>
+                        <MenuOutlined />
+                        {t('ButtonOpenMainMenuText')}
+                    </button>
+                </div>
+            </Container>
         </header>
     )
 }
