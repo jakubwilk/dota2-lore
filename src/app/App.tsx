@@ -1,11 +1,12 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { HomePage } from './pages/home/Home'
 import { MainMenu } from './components/main-menu/MainMenu'
+import { Header } from './components/header/Header'
+import { Footer } from './components/footer/Footer'
 import { NavigationContext } from './context/NavigationContext'
 import styles from './App.module.scss'
-import { Helmet } from 'react-helmet-async'
-import { Header } from './components/header/Header'
 
 export const App = () => {
     const { state } = React.useContext(NavigationContext)
@@ -22,6 +23,7 @@ export const App = () => {
                 <Routes>
                     <Route path={'/'} element={<HomePage />} />
                 </Routes>
+                <Footer />
             </main>
         </React.Suspense>
     )

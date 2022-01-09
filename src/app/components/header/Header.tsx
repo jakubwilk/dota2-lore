@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { MenuOutlined } from '@ant-design/icons'
 import { NavigationContext } from '../../context/NavigationContext'
@@ -21,9 +20,16 @@ export const Header = ({}: IHeaderProps) => {
             <Container isFullWidth={true} inheritContainerHeight={true}>
                 <div className={styles.row}>
                     <h1 className={styles.title}>
-                        <Link className={styles.titleLink} to={'/'}>
-                            <img className={styles.logo} src={dota2Logo} alt={'Logo Dota2'} />
-                        </Link>
+                        <a
+                            href={'https://dota2.com/'}
+                            title={t('SharedLogoLinkTitleText', { 1: 'dota2.com' })}
+                        >
+                            <img
+                                className={styles.logo}
+                                src={dota2Logo}
+                                alt={t('HeaderLogoAltText')}
+                            />
+                        </a>
                     </h1>
                     <button className={styles.menuButton} onClick={(e) => handleOpenMenu(e)}>
                         <MenuOutlined />

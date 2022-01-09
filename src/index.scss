@@ -16,6 +16,7 @@ body {
     font-family: $poppins-font;
     font-weight: $font-regular-weight;
     @include font-size(16);
+    position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
