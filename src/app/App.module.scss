@@ -12,7 +12,7 @@
         left: 0;
         z-index: 75;
         @include box(100vw, 100vh);
-        background-color: rgba($dark-color, .35);
+        background-color: rgba($dark-color, 0.35);
     }
 }
 

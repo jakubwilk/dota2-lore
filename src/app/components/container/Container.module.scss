@@ -1,43 +1,43 @@
 @import 'src/static/styles/helpers';
 
 .containerFixed {
-  @include mx(1rem);
+    @include mx(1rem);
 
-  @include media('notebook') {
-    @include mx(auto);
-    width: 100%;
-    max-width: 920px;
-  }
+    @include media('notebook') {
+        @include mx(auto);
+        width: 100%;
+        max-width: 920px;
+    }
 
-  @include media('laptop') {
-    max-width: 1140px;
-  }
+    @include media('laptop') {
+        max-width: 1140px;
+    }
 
-  @include media('desktop') {
-    max-width: 1400px;
-  }
+    @include media('desktop') {
+        max-width: 1400px;
+    }
 
-  &[data-inherit-height='true'] {
-    height: inherit;
-  }
+    &[data-inherit-height='true'] {
+        height: inherit;
+    }
 
-  &[data-inherit-height='false'] {
-    height: auto;
-  }
+    &[data-inherit-height='false'] {
+        height: auto;
+    }
 }
 
 .containerFluid {
-  @include mx(1rem);
+    @include mx(1rem);
 
-  @include media('notebook') {
-    @include mx(2rem);
-  }
+    @include media('notebook') {
+        @include mx(2rem);
+    }
 
-  &[data-inherit-height='true'] {
-    height: inherit;
-  }
+    &[data-inherit-height='true'] {
+        height: inherit;
+    }
 
-  &[data-inherit-height='false'] {
-    height: auto;
-  }
+    &[data-inherit-height='false'] {
+        height: auto;
+    }
 }

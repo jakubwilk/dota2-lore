@@ -1,1 +1,46 @@
 @import 'src/static/styles/helpers';
+
+.footer {
+    @include box(auto, 200px);
+}
+
+.row {
+    @include flex-center-vert();
+    justify-content: space-between;
+    height: inherit;
+}
+
+.rowItem {
+    &:first-child {
+        text-align: left;
+    }
+
+    &:last-child {
+        text-align: right;
+    }
+}
+
+.text {
+    @include font-size(14);
+    @include my(0);
+    color: $base-color;
+}
+
+.link {
+    display: inline-block;
+    @include font-size(14);
+    text-decoration: none;
+    color: $grey-color;
+    transition: color 0.05s ease-in-out;
+
+    &:hover,
+    &:focus {
+        border: none;
+        outline: none;
+        color: $primary-color;
+    }
+}
+
+.logo {
+    @include my(0.5rem, 0);
+}
