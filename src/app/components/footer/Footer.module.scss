@@ -5,18 +5,32 @@
 }
 
 .row {
-    @include flex-center-vert();
-    justify-content: space-between;
+    @include flex-center-column();
     height: inherit;
+
+    @include media('notebook') {
+        @include flex-center-vert();
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .rowItem {
     &:first-child {
-        text-align: left;
+        text-align: center;
+        @include my(0, 1rem);
+
+        @include media('notebook') {
+            text-align: left;
+        }
     }
 
     &:last-child {
-        text-align: right;
+        text-align: center;
+
+        @include media('notebook') {
+            text-align: right;
+        }
     }
 }
 

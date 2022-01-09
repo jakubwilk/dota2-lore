@@ -2,6 +2,8 @@
 
 .panelNavigationActive {
     position: relative;
+    display: grid;
+    grid-template-rows: 110px calc(100vh - 310px) 200px;
     transform: translateX(-350px);
     transition-duration: 0.1s;
 
@@ -17,5 +19,7 @@
 }
 
 .app {
+    display: grid;
+    grid-template-rows: 110px calc(100vh - 310px) 200px;
     transition-duration: 0.1s;
 }

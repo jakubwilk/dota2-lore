@@ -1,0 +1,43 @@
+@import 'src/static/styles/helpers';
+
+.greetings {
+  text-align: center;
+  @include my(5rem);
+}
+
+.text {
+  font-family: $merriweather-font;
+  font-weight: $font-light-weight;
+  color: $white-color;
+  @include font-size(34);
+  @include my(0);
+  white-space: pre-line;
+
+  @include media('notebook') {
+    @include font-size(42);
+  }
+}
+
+.list {
+  @include flex-center();
+  list-style: none;
+  @include my(2rem, 0);
+  @include px(0);
+}
+
+.listSeparator {
+  @include font-size(24);
+  color: $primary-color;
+}
+
+.listItem {
+  color: $base-color;
+  font-weight: $font-light-weight;
+  letter-spacing: 1px;
+  @include font-size(15);
+  @include mx(1rem);
+
+  @include media('notebook') {
+    @include font-size(18);
+  }
+}
