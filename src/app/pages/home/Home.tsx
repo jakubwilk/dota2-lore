@@ -13,7 +13,18 @@ export const HomePage = ({}: IHomeProps) => {
                         <Greetings />
                     </Container>
                 </section>
-                <span>{'Home page'}</span>
+                <section>
+                    <p>{'Here random 5 heroes'}</p>
+                </section>
+                <section>
+                    <p>{'Here random 4 races'}</p>
+                </section>
+                <section>
+                    <p>{'Here list of regions in slider'}</p>
+                </section>
+                <section>
+                    <p>{'Here random X stories'}</p>
+                </section>
             </div>
         </React.Fragment>
     )

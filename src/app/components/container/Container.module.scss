@@ -2,7 +2,7 @@
 
 .containerFixed {
     @include mx(1rem);
-    width: calc(100vw - 2rem);
+    width: auto;
 
     @include media('notebook') {
         @include mx(auto);
@@ -29,11 +29,11 @@
 
 .containerFluid {
     @include mx(1rem);
-    width: calc(100vw - 2rem);
+    width: auto;
 
     @include media('notebook') {
         @include mx(2rem);
-        width: calc(100vw - 4rem);
+        width: auto;
     }
 
     &[data-inherit-height='true'] {
