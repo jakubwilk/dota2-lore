@@ -1,6 +1,10 @@
 {
     "ButtonCloseMainMenuText": "Zamknij menu",
     "ButtonOpenMainMenuText": "Otwórz menu",
+    "FooterLogoAltText": "Oficjalne logo Valve",
+    "FooterLogoLinkTitleText": "Przejdź do strony valvesoftware.com",
+    "HeaderLogoAltText": "Logotyp Dota2",
+    "HeaderLogoLinkTitleText": "Przejdź do strony dota2.com",
     "MainMenuCategoryCharactersText": "Postacie",
     "MainMenuCategoryDefaultText": "Główne",
     "MainMenuCategoryRacesText": "Rasy",
