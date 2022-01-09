@@ -19,24 +19,20 @@ export const Footer = ({}: IFooterProps) => {
                             <a
                                 className={styles.link}
                                 href={'https://jakubwilk.pl'}
-                                title={'Przejdź do strony jakubwilk.pl'}
+                                title={t('SharedLogoLinkTitleText', { 1: 'jakubwilk.pl' })}
                             >
                                 &copy; {currentYear} {'jakubwilk.pl'}
                             </a>
                             <br />
-                            {'Wszelkie prawa zastrzeżone'}
+                            {t('FooterCopyrightText')}
                         </p>
                     </GridItem>
                     <GridItem className={styles.rowItem}>
-                        <p className={styles.text}>
-                            {'Inspiracją do stworzenia strony była gra Dota2'}
-                            <br />
-                            {'opracowana i wydana przez Valve'}
-                        </p>
+                        <p className={styles.text}>{t('FooterInspirationAuthorText')}</p>
                         <a
                             className={styles.link}
                             href={'https://www.valvesoftware.com/pl/'}
-                            title={t('FooterLogoLinkTitleText')}
+                            title={t('SharedLogoLinkTitleText', { 1: 'valvesoftware.com' })}
                         >
                             <img
                                 className={styles.logo}

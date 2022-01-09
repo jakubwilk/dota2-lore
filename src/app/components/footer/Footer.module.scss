@@ -23,6 +23,7 @@
 .text {
     @include font-size(14);
     @include my(0);
+    white-space: pre-line;
     color: $base-color;
 }
 

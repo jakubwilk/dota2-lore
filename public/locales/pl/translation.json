@@ -1,10 +1,10 @@
 {
     "ButtonCloseMainMenuText": "Zamknij menu",
     "ButtonOpenMainMenuText": "Otwórz menu",
+    "FooterCopyrightText": "Wszelkie prawa zastrzeżone",
+    "FooterInspirationAuthorText": "Inspiracją do stworzenia strony była gra Dota2 \n opracowana i wydana przez firmę Valve",
     "FooterLogoAltText": "Oficjalne logo Valve",
-    "FooterLogoLinkTitleText": "Przejdź do strony valvesoftware.com",
     "HeaderLogoAltText": "Logotyp Dota2",
-    "HeaderLogoLinkTitleText": "Przejdź do strony dota2.com",
     "MainMenuCategoryCharactersText": "Postacie",
     "MainMenuCategoryDefaultText": "Główne",
     "MainMenuCategoryRacesText": "Rasy",
@@ -20,5 +20,6 @@
     "MainMenuRacesText": "Wszystkie rasy",
     "MainMenuRacesTitleText": "Przejdź do listy wszystkich ras",
     "MainMenuRegionsText": "Regiony",
-    "MainMenuRegionsTitleText": "Przejdź do spisu wszystkich krain"
+    "MainMenuRegionsTitleText": "Przejdź do spisu wszystkich krain",
+    "SharedLogoLinkTitleText": "Przejdź do strony {{1}}"
 }

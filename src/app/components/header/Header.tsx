@@ -20,7 +20,10 @@ export const Header = ({}: IHeaderProps) => {
             <Container isFullWidth={true} inheritContainerHeight={true}>
                 <div className={styles.row}>
                     <h1 className={styles.title}>
-                        <a href={'https://dota2.com/'} title={t('HeaderLogoLinkTitleText')}>
+                        <a
+                            href={'https://dota2.com/'}
+                            title={t('SharedLogoLinkTitleText', { 1: 'dota2.com' })}
+                        >
                             <img
                                 className={styles.logo}
                                 src={dota2Logo}
