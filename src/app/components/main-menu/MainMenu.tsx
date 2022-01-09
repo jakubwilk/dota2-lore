@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment, MouseEvent, useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavigationContext } from '../../context/NavigationContext'
 import { DoubleRightOutlined } from '@ant-design/icons'
@@ -8,14 +8,14 @@ import styles from './MainMenu.module.scss'
 
 export const MainMenu = () => {
     const { t } = useTranslation()
-    const { state, setContextStateValue } = React.useContext(NavigationContext)
+    const { state, setContextStateValue } = useContext(NavigationContext)
 
     const buildPanelClassName = (): string => {
         if (state.isMainNavigationActive) return `${styles.panel} ${styles.panelActive}`
         return styles.panel
     }
 
-    const handleCloseNavigationPanel = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleCloseNavigationPanel = (e: MouseEvent<HTMLButtonElement>) => {
         setContextStateValue('isMainNavigationActive', false)
     }
 
@@ -23,7 +23,7 @@ export const MainMenu = () => {
         <aside className={buildPanelClassName()}>
             <Menu className={styles.menu}>
                 {appMenu.map((menuSection, index) => (
-                    <React.Fragment key={menuSection.key}>
+                    <Fragment key={menuSection.key}>
                         <MenuItem className={styles.menuSeparator} isEnable={true}>
                             {t(menuSection.categoryKey)}
                         </MenuItem>
@@ -41,7 +41,7 @@ export const MainMenu = () => {
                                 {t(menuItem.nameKey)}
                             </MenuItem>
                         ))}
-                    </React.Fragment>
+                    </Fragment>
                 ))}
             </Menu>
             <button
