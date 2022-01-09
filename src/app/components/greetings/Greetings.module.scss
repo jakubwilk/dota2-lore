@@ -2,7 +2,7 @@
 
 .greetings {
   text-align: center;
-  @include my(5rem);
+  @include py(5rem, 8rem);
 }
 
 .text {
@@ -12,6 +12,7 @@
   @include font-size(34);
   @include my(0);
   white-space: pre-line;
+  word-break: break-word;
 
   @include media('notebook') {
     @include font-size(42);
@@ -19,10 +20,15 @@
 }
 
 .list {
-  @include flex-center();
+  @include flex-center-column();
   list-style: none;
   @include my(2rem, 0);
   @include px(0);
+
+  @include media('tablet') {
+    @include flex-center();
+    flex-direction: row;
+  }
 }
 
 .listSeparator {

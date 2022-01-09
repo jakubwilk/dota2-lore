@@ -7,12 +7,14 @@ import { Container } from '../../components/container/Container'
 export const HomePage = ({}: IHomeProps) => {
     return (
         <React.Fragment>
-            <section className={styles.home}>
-                <Container isFullWidth={false} inheritContainerHeight={true}>
-                    <Greetings />
-                </Container>
-            </section>
-            <span>{'Home page'}</span>
+            <div>
+                <section className={styles.home}>
+                    <Container isFullWidth={false} inheritContainerHeight={true}>
+                        <Greetings />
+                    </Container>
+                </section>
+                <span>{'Home page'}</span>
+            </div>
         </React.Fragment>
     )
 }

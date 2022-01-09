@@ -11,15 +11,15 @@ export const Greetings = ({}: IGreetingsProps) => {
         <div className={styles.greetings}>
             <h2 className={styles.text}>{t('GreetingsWelcomeText')}</h2>
             <ul className={styles.list}>
-                <li className={styles.listItem}>{'Bohaterowie'}</li>
+                <li className={styles.listItem}>{t('GreetingsListHeroesText')}</li>
                 <li className={styles.listSeparator}>
                     <SmallDashOutlined />
                 </li>
-                <li className={styles.listItem}>{'Regiony'}</li>
+                <li className={styles.listItem}>{t('GreetingsListRegionsText')}</li>
                 <li className={styles.listSeparator}>
                     <SmallDashOutlined />
                 </li>
-                <li className={styles.listItem}>{'Historie'}</li>
+                <li className={styles.listItem}>{t('GreetingsListStoriesText')}</li>
             </ul>
         </div>
     )
