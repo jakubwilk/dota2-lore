@@ -21,6 +21,7 @@ export const Header = ({}: IHeaderProps) => {
                 <div className={styles.row}>
                     <h1 className={styles.title}>
                         <a
+                            className={styles.titleLink}
                             href={'https://dota2.com/'}
                             title={t('SharedLogoLinkTitleText', { 1: 'dota2.com' })}
                         >

@@ -85,11 +85,15 @@
     }
 }
 
+.menuButtonWrapper {
+    @include my(1rem, 0);
+}
+
 .menuButtonClose {
     @include flex-center-vert();
     justify-content: space-between;
     @include box(100%, 50px);
-    @include my(1rem, 0);
+    @include my(0);
     @include px(0, 1.5rem);
     @include font-size(14);
     letter-spacing: 1px;

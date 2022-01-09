@@ -5,6 +5,7 @@ import { DoubleRightOutlined } from '@ant-design/icons'
 import { Menu, MenuItem } from '../shared/menu/Menu'
 import { appMenu } from '../../utils/constants/mainMenu'
 import styles from './MainMenu.module.scss'
+import { LanguageSwitcher } from '../language-switcher/LanguageSwitcher'
 
 export const MainMenu = () => {
     const { t } = useTranslation()
@@ -44,13 +45,16 @@ export const MainMenu = () => {
                     </Fragment>
                 ))}
             </Menu>
-            <button
-                className={styles.menuButtonClose}
-                onClick={(e) => handleCloseNavigationPanel(e)}
-            >
-                <DoubleRightOutlined />
-                {t('ButtonCloseMainMenuText')}
-            </button>
+            <div className={styles.menuButtonWrapper}>
+                <LanguageSwitcher />
+                <button
+                    className={styles.menuButtonClose}
+                    onClick={(e) => handleCloseNavigationPanel(e)}
+                >
+                    <DoubleRightOutlined />
+                    {t('ButtonCloseMainMenuText')}
+                </button>
+            </div>
         </aside>
     )
 }
