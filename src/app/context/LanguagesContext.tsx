@@ -4,6 +4,7 @@ import {
     ILanguagesContextData,
     ILanguagesContextProvider,
 } from '../utils/interfaces/ILanguagesContext'
+import { TAvailableLanguagesItem } from '../utils/types/TAvailableLanguages'
 
 const defaultContextState: ILanguagesContextData = {
     availableLanguages: [],
@@ -11,14 +12,17 @@ const defaultContextState: ILanguagesContextData = {
 
 export const LanguagesContext = createContext<ILanguagesContext>({
     state: defaultContextState,
-    setContextStateValue: (contextPropertyName: string, value: Array<string>) => {},
+    setContextStateValue: (
+        contextPropertyName: string,
+        value: Array<TAvailableLanguagesItem>
+    ) => {},
 })
 
 export const LanguagesProvider = ({ children }: ILanguagesContextProvider) => {
     const [contextState, setContextState] = useState<ILanguagesContextData>(defaultContextState)
 
     const setContextStateValue = useCallback(
-        (contextPropertyName: string, value: Array<string>) => {
+        (contextPropertyName: string, value: Array<TAvailableLanguagesItem>) => {
             setContextState((prevState) => ({
                 ...prevState,
                 [contextPropertyName]: value,

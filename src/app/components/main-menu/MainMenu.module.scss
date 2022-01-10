@@ -87,6 +87,7 @@
 
 .menuButtonWrapper {
     @include my(1rem, 0);
+    position: relative;
 }
 
 .menuButtonClose {

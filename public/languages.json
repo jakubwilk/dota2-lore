@@ -1,3 +1,12 @@
 {
-  "languages": ["pl", "en"]
+    "languages": [
+        {
+            "langCode": "pl",
+            "name": "LanguageSwitcherPolishTitle"
+        },
+        {
+            "langCode": "en",
+            "name": "LanguageSwitcherEnglishTitle"
+        }
+    ]
 }

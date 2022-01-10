@@ -1,3 +1,8 @@
 export type TAvailableLanguages = {
-    languages: Array<string>
+    languages: Array<TAvailableLanguagesItem>
+}
+
+export type TAvailableLanguagesItem = {
+    langCode: string
+    name: string
 }

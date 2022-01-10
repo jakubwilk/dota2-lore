@@ -1,12 +1,16 @@
 import React from 'react'
+import { TAvailableLanguagesItem } from '../types/TAvailableLanguages'
 
 export interface ILanguagesContext {
     state: ILanguagesContextData
-    setContextStateValue: (contextPropertyName: string, value: Array<string>) => void
+    setContextStateValue: (
+        contextPropertyName: string,
+        value: Array<TAvailableLanguagesItem>
+    ) => void
 }
 
 export interface ILanguagesContextData {
-    availableLanguages: Array<string>
+    availableLanguages: Array<TAvailableLanguagesItem>
 }
 
 export interface ILanguagesContextProvider {
