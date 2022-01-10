@@ -1,4 +1,5 @@
 {
+    "ButtonChangeLanguage": "Zmień język",
     "ButtonCloseMainMenuText": "Zamknij menu",
     "ButtonOpenMainMenuText": "Otwórz menu",
     "FooterCopyrightText": "Wszelkie prawa zastrzeżone",
@@ -9,6 +10,8 @@
     "GreetingsListStoriesText": "Historie",
     "GreetingsWelcomeText": "Odkryj niesamowitą historię \n świata Dota2",
     "HeaderLogoAltText": "Logotyp Dota2",
+    "LanguageSwitcherEnglishTitle": "Angielski",
+    "LanguageSwitcherPolishTitle": "Polski",
     "MainMenuCategoryCharactersText": "Postacie",
     "MainMenuCategoryDefaultText": "Główne",
     "MainMenuCategoryRacesText": "Rasy",

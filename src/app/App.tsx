@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { Suspense, useContext, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { useReactTranslation } from './hooks/i18next/useReactTranslation'
+import { LanguagesContext } from './context/LanguagesContext'
+import { TAvailableLanguages } from './utils/types/TAvailableLanguages'
 import { HomePage } from './pages/home/Home'
 import { MainMenu } from './components/main-menu/MainMenu'
 import { Header } from './components/header/Header'
@@ -9,11 +12,21 @@ import { NavigationContext } from './context/NavigationContext'
 import styles from './App.module.scss'
 
 export const App = () => {
-    const { state } = React.useContext(NavigationContext)
+    const { setContextStateValue } = useContext(LanguagesContext)
+    const { loadLanguages } = useReactTranslation()
+    const { state } = useContext(NavigationContext)
     const { isMainNavigationActive } = state
 
+    useEffect(() => {
+        loadLanguages().then((res: TAvailableLanguages) =>
+            setContextStateValue('availableLanguages', res.languages)
+        )
+
+        return () => {}
+    }, [loadLanguages, setContextStateValue])
+
     return (
-        <React.Suspense fallback={'loading'}>
+        <Suspense fallback={'loading'}>
             <Helmet>
                 <body data-navigation-active={state.isMainNavigationActive ? 'true' : 'false'} />
             </Helmet>
@@ -25,6 +38,6 @@ export const App = () => {
                 </Routes>
                 <Footer />
             </main>
-        </React.Suspense>
+        </Suspense>
     )
 }

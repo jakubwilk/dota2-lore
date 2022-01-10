@@ -1,0 +1,12 @@
+{
+    "languages": [
+        {
+            "langCode": "pl",
+            "name": "LanguageSwitcherPolishTitle"
+        },
+        {
+            "langCode": "en",
+            "name": "LanguageSwitcherEnglishTitle"
+        }
+    ]
+}

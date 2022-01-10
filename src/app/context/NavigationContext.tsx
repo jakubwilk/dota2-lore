@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext, useCallback, useState } from 'react'
 import {
     INavigationContext,
     INavigationContextData,
@@ -9,7 +9,7 @@ const defaultContextState: INavigationContextData = {
     isMainNavigationActive: false,
 }
 
-export const NavigationContext = React.createContext<INavigationContext>({
+export const NavigationContext = createContext<INavigationContext>({
     state: defaultContextState,
     resetContextState: () => {},
     setContextStateValue: <T extends number | string | boolean | undefined | null>(
@@ -19,10 +19,9 @@ export const NavigationContext = React.createContext<INavigationContext>({
 })
 
 export const NavigationProvider = ({ children }: INavigationContextProvider) => {
-    const [contextState, setContextState] =
-        React.useState<INavigationContextData>(defaultContextState)
+    const [contextState, setContextState] = useState<INavigationContextData>(defaultContextState)
 
-    const setContextStateValue = React.useCallback(
+    const setContextStateValue = useCallback(
         <T extends number | string | boolean | undefined | null>(
             contextPropertyName: string,
             value: T
@@ -35,7 +34,7 @@ export const NavigationProvider = ({ children }: INavigationContextProvider) => 
         []
     )
 
-    const resetContextState = React.useCallback(() => {
+    const resetContextState = useCallback(() => {
         setContextState(defaultContextState)
     }, [])
 

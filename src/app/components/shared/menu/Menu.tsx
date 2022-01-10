@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { IMenuProps, IMenuItemProps } from '../../../utils/interfaces/IMenu'
 import { NavLink } from 'react-router-dom'
 
@@ -38,7 +38,7 @@ export const MenuItem = ({
                     {children}
                 </NavLink>
             ) : (
-                <React.Fragment>{children}</React.Fragment>
+                <Fragment>{children}</Fragment>
             )}
         </li>
     ) : null
