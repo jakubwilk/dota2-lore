@@ -18,9 +18,11 @@ export const App = () => {
     const { isMainNavigationActive } = state
 
     useEffect(() => {
-        loadLanguages().then((res: TAvailableLanguages) =>
-            setContextStateValue('availableLanguages', res.languages)
-        )
+        loadLanguages()
+            .then((res: TAvailableLanguages) =>
+                setContextStateValue('availableLanguages', res.languages)
+            )
+            .catch((err) => console.log(err.statusCode))
 
         return () => {}
     }, [loadLanguages, setContextStateValue])
