@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
+import { ErrorProvider } from './app/context/ErrorContext'
 import { LanguagesProvider } from './app/context/LanguagesContext'
 import { NavigationProvider } from './app/context/NavigationContext'
 import { App } from './app/App'
@@ -12,13 +13,15 @@ import './index.scss'
 ReactDOM.render(
     <React.StrictMode>
         <HelmetProvider>
-            <LanguagesProvider>
-                <BrowserRouter>
-                    <NavigationProvider>
-                        <App />
-                    </NavigationProvider>
-                </BrowserRouter>
-            </LanguagesProvider>
+            <ErrorProvider>
+                <LanguagesProvider>
+                    <BrowserRouter>
+                        <NavigationProvider>
+                            <App />
+                        </NavigationProvider>
+                    </BrowserRouter>
+                </LanguagesProvider>
+            </ErrorProvider>
         </HelmetProvider>
     </React.StrictMode>,
     document.getElementById('root')
