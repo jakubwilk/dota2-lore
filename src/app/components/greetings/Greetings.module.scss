@@ -1,49 +1,49 @@
 @import 'src/static/styles/helpers';
 
 .greetings {
-  text-align: center;
-  @include py(5rem, 8rem);
+    text-align: center;
+    @include py(5rem, 8rem);
 }
 
 .text {
-  font-family: $merriweather-font;
-  font-weight: $font-light-weight;
-  color: $white-color;
-  @include font-size(34);
-  @include my(0);
-  white-space: pre-line;
-  word-break: break-word;
+    font-family: $merriweather-font;
+    font-weight: $font-light-weight;
+    color: $white-color;
+    @include font-size(34);
+    @include my(0);
+    white-space: pre-line;
+    word-break: break-word;
 
-  @include media('notebook') {
-    @include font-size(42);
-  }
+    @include media('notebook') {
+        @include font-size(42);
+    }
 }
 
 .list {
-  @include flex-center-column();
-  list-style: none;
-  @include my(2rem, 0);
-  @include px(0);
+    @include flex-center-column();
+    list-style: none;
+    @include my(2rem, 0);
+    @include px(0);
 
-  @include media('tablet') {
-    @include flex-center();
-    flex-direction: row;
-  }
+    @include media('tablet') {
+        @include flex-center();
+        flex-direction: row;
+    }
 }
 
 .listSeparator {
-  @include font-size(24);
-  color: $primary-color;
+    @include font-size(24);
+    color: $primary-color;
 }
 
 .listItem {
-  color: $base-color;
-  font-weight: $font-light-weight;
-  letter-spacing: 1px;
-  @include font-size(15);
-  @include mx(1rem);
+    color: $base-color;
+    font-weight: $font-light-weight;
+    letter-spacing: 1px;
+    @include font-size(15);
+    @include mx(1rem);
 
-  @include media('notebook') {
-    @include font-size(18);
-  }
+    @include media('notebook') {
+        @include font-size(18);
+    }
 }

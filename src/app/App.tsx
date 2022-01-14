@@ -10,6 +10,7 @@ import { Header } from './components/header/Header'
 import { Footer } from './components/footer/Footer'
 import { NavigationContext } from './context/NavigationContext'
 import styles from './App.module.scss'
+import { ErrorPage } from './pages/error/Error'
 
 export const App = () => {
     const { setContextStateValue } = useContext(LanguagesContext)
@@ -37,6 +38,7 @@ export const App = () => {
                 <Header />
                 <Routes>
                     <Route path={'/'} element={<HomePage />} />
+                    <Route path={'/error'} element={<ErrorPage />} />
                 </Routes>
                 <Footer />
             </main>
