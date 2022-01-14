@@ -1,61 +1,61 @@
 @import 'src/static/styles/helpers';
 
 .footer {
-    @include box(auto, 200px);
+  @include box(auto, 200px);
 }
 
 .row {
-    @include flex-center-column();
-    height: inherit;
+  @include flex-center-column();
+  height: inherit;
 
-    @include media('notebook') {
-        @include flex-center-vert();
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  @include media('notebook') {
+    @include flex-center-vert();
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .rowItem {
-    &:first-child {
-        text-align: center;
-        @include my(0, 1rem);
+  &:first-child {
+    text-align: center;
+    @include my(0, 1rem);
 
-        @include media('notebook') {
-            text-align: left;
-        }
+    @include media('notebook') {
+      text-align: left;
     }
+  }
 
-    &:last-child {
-        text-align: center;
+  &:last-child {
+    text-align: center;
 
-        @include media('notebook') {
-            text-align: right;
-        }
+    @include media('notebook') {
+      text-align: right;
     }
+  }
 }
 
 .text {
-    @include font-size(14);
-    @include my(0);
-    white-space: pre-line;
-    color: $base-color;
+  @include font-size(14);
+  @include my(0);
+  white-space: pre-line;
+  color: $base-color;
 }
 
 .link {
-    display: inline-block;
-    @include font-size(14);
-    text-decoration: none;
-    color: $grey-color;
-    transition: color 0.05s ease-in-out;
+  display: inline-block;
+  @include font-size(14);
+  text-decoration: none;
+  color: $grey-color;
+  transition: color 0.05s ease-in-out;
 
-    &:hover,
-    &:focus {
-        border: none;
-        outline: none;
-        color: $primary-color;
-    }
+  &:hover,
+  &:focus {
+    border: none;
+    outline: none;
+    color: $primary-color;
+  }
 }
 
 .logo {
-    @include my(0.5rem, 0);
+  @include my(0.5rem, 0);
 }

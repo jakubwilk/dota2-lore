@@ -1,5 +1,5 @@
 import React, { Suspense, useContext, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useReactTranslation } from './hooks/i18next/useReactTranslation'
 import { LanguagesContext } from './context/LanguagesContext'

@@ -1,47 +1,47 @@
 @import 'src/static/styles/helpers';
 
 .header {
-    position: relative;
-    @include box(100%, 110px);
+  position: relative;
+  @include box(100%, 110px);
 }
 
 .row {
-    height: inherit;
-    @include flex-center-vert();
-    justify-content: space-between;
+  height: inherit;
+  @include flex-center-vert();
+  justify-content: space-between;
 }
 
 .title {
-    @include my(0);
+  @include my(0);
 }
 
 .titleLink {
-    display: block;
+  display: block;
 }
 
 .logo {
-    @include box(auto, 65px);
+  @include box(auto, 65px);
 }
 
 .menuButton {
-    @include flex-center-vert();
-    @include box(auto, 50px);
-    @include px(1.5rem);
-    background-color: $dark-color;
-    color: $white-color;
-    @include font-size(14);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 0;
-    cursor: pointer;
-    transition: background-color 0.05s ease-in-out;
+  @include flex-center-vert();
+  @include box(auto, 50px);
+  @include px(1.5rem);
+  background-color: $dark-color;
+  color: $white-color;
+  @include font-size(14);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.05s ease-in-out;
 
-    & > span:first-child {
-        @include mx(0, 0.65rem);
-    }
+  & > span:first-child {
+    @include mx(0, 0.65rem);
+  }
 
-    &:hover,
-    &:focus {
-        background-color: $primary-color;
-    }
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
 }

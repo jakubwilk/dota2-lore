@@ -1,5 +1,5 @@
 import React from 'react'
-import { IContainerProps } from '../../utils/interfaces/IContainer'
+import { IContainerProps } from '../../utils/interfaces/components/IContainer'
 import styles from './Container.module.scss'
 
 export const Container = ({

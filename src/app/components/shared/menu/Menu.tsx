@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { IMenuProps, IMenuItemProps } from '../../../utils/interfaces/IMenu'
+import { IMenuItemProps, IMenuProps } from '../../../utils/interfaces/components/IMenu'
 import { NavLink } from 'react-router-dom'
 
 export const Menu = ({ className, children }: IMenuProps) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { TAvailableLanguagesItem } from '../types/TAvailableLanguages'
+import { TAvailableLanguagesItem } from '../../types/TAvailableLanguages'
 
 export interface ILanguagesContext {
     state: ILanguagesContextData

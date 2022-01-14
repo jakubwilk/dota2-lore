@@ -3,7 +3,7 @@ import {
     ILanguagesContext,
     ILanguagesContextData,
     ILanguagesContextProvider,
-} from '../utils/interfaces/ILanguagesContext'
+} from '../utils/interfaces/context/ILanguagesContext'
 import { TAvailableLanguagesItem } from '../utils/types/TAvailableLanguages'
 
 const defaultContextState: ILanguagesContextData = {

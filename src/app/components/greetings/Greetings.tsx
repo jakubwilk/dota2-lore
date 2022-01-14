@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { SmallDashOutlined } from '@ant-design/icons'
-import { IGreetingsProps } from '../../utils/interfaces/IGreetings'
+import { IGreetingsProps } from '../../utils/interfaces/components/IGreetings'
 import styles from './Greetings.module.scss'
 
 export const Greetings = ({}: IGreetingsProps) => {

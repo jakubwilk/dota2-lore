@@ -1,25 +1,25 @@
 @import 'src/static/styles/helpers';
 
 .panelNavigationActive {
-    position: relative;
-    display: grid;
-    grid-template-rows: 110px 1fr 200px;
-    transform: translateX(-350px);
-    transition-duration: 0.1s;
+  position: relative;
+  display: grid;
+  grid-template-rows: 110px 1fr 200px;
+  transform: translateX(-350px);
+  transition-duration: 0.1s;
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 75;
-        @include box(100vw, 100vh);
-        background-color: rgba($dark-color, 0.35);
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 75;
+    @include box(100vw, 100vh);
+    background-color: rgba($dark-color, 0.35);
+  }
 }
 
 .app {
-    display: grid;
-    grid-template-rows: 110px 1fr 200px;
-    transition-duration: 0.1s;
+  display: grid;
+  grid-template-rows: 110px 1fr 200px;
+  transition-duration: 0.1s;
 }
