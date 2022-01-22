@@ -4,11 +4,12 @@ import {
     IErrorContextData,
     IErrorContextProvider,
 } from '../utils/interfaces/context/IErrorContext'
+import { statusCodes } from '../utils/constants/statusCodes'
 
 const defaultContextState: IErrorContextData = {
     isErrorDialogActive: false,
     isErrorPageActive: false,
-    statusCode: -100,
+    statusCode: statusCodes.BadRequest,
     message: '',
 }
 
