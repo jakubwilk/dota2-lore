@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { IFooterProps } from '../../utils/interfaces/IFooter'
+import { IFooterProps } from '../../utils/interfaces/components/IFooter'
 import { Container } from '../container/Container'
 import { Grid, GridItem } from '../grid/Grid'
 import valveLogo from './../../../static/images/valve_logo.png'

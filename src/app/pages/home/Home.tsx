@@ -1,5 +1,5 @@
 import React from 'react'
-import { IHomeProps } from '../../utils/interfaces/IHome'
+import { IHomeProps } from '../../utils/interfaces/pages/IHome'
 import { Greetings } from '../../components/greetings/Greetings'
 import styles from './Home.module.scss'
 import { Container } from '../../components/container/Container'

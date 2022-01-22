@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { TranslationOutlined } from '@ant-design/icons'
 import { LanguagesContext } from '../../context/LanguagesContext'
 import { LanguageSwitcherItem } from './LanguageSwitcherItem'
-import { ILanguageSwitcherProps } from '../../utils/interfaces/ILanguageSwitcher'
+import { ILanguageSwitcherProps } from '../../utils/interfaces/components/ILanguageSwitcher'
 import mainMenuStyles from '../main-menu/MainMenu.module.scss'
 import styles from './LanguageSwitcher.module.scss'
 

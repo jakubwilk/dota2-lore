@@ -3,7 +3,7 @@ import {
     INavigationContext,
     INavigationContextData,
     INavigationContextProvider,
-} from '../utils/interfaces/INavigationContext'
+} from '../utils/interfaces/context/INavigationContext'
 
 const defaultContextState: INavigationContextData = {
     isMainNavigationActive: false,

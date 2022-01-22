@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { ILanguageSwitcherItemProps } from '../../utils/interfaces/ILanguageSwitcher'
+import { ILanguageSwitcherItemProps } from '../../utils/interfaces/components/ILanguageSwitcher'
 import styles from './LanguageSwitcher.module.scss'
 
 export const LanguageSwitcherItem = ({
