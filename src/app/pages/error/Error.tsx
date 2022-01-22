@@ -5,17 +5,29 @@ import { IErrorContext } from '../../utils/interfaces/context/IErrorContext'
 import { IErrorProps } from '../../utils/interfaces/pages/IError'
 import styles from './Error.module.scss'
 
-export const ErrorPage = ({}: IErrorProps) => {
+export const ErrorPage = ({ isActive = false, status, msg }: IErrorProps) => {
     const { state } = useContext<IErrorContext>(ErrorContext)
     const { isErrorPageActive, statusCode, message } = state
 
-    if (!isErrorPageActive) return <Navigate to={'/'} />
+    const displayErrorCode = (): number | undefined => {
+        if (status) return status
+
+        return statusCode
+    }
+
+    const displayErrorMessage = (): string | undefined => {
+        if (msg) return msg
+
+        return message
+    }
+
+    if (!isErrorPageActive && !isActive) return <Navigate to={'/'} />
 
     return (
         <div className={styles.wrapper}>
             <div>
-                <h2>{statusCode}</h2>
-                <p>{message}</p>
+                <h2>{displayErrorCode()}</h2>
+                <p>{displayErrorMessage()}</p>
             </div>
         </div>
     )

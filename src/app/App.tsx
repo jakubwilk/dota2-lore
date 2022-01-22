@@ -39,6 +39,10 @@ export const App = () => {
                 <Routes>
                     <Route path={'/'} element={<HomePage />} />
                     <Route path={'/error'} element={<ErrorPage />} />
+                    <Route
+                        path={'*'}
+                        element={<ErrorPage isActive={true} status={404} msg={'Not found'} />}
+                    />
                 </Routes>
                 <Footer />
             </main>
