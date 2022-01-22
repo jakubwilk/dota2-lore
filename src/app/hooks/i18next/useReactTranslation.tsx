@@ -1,18 +1,22 @@
-import { useCallback } from 'react'
+import { useCallback, useContext } from 'react'
 import axios, { AxiosError } from 'axios'
 import { TAvailableLanguages } from '../../utils/types/TAvailableLanguages'
 import { AppError } from '../../utils/helpers/AppError'
+import { LanguagesContext } from '../../context/LanguagesContext'
+import { statusCodes } from '../../utils/constants/statusCodes'
 
 export const useReactTranslation = () => {
-    const languagesListURL = '/language.json'
+    const { setContextStateValue } = useContext(LanguagesContext)
+    const languagesListURL = '/languages.json'
 
-    const loadLanguages = useCallback(async (): Promise<TAvailableLanguages> => {
+    const loadLanguages = useCallback(async (): Promise<void> => {
         try {
             const response = await axios.get<TAvailableLanguages>(languagesListURL, {
                 withCredentials: true,
             })
+            const { languages } = response.data
 
-            return response.data
+            setContextStateValue('availableLanguages', languages)
         } catch (err: unknown) {
             const error = err as AxiosError
 
@@ -31,11 +35,11 @@ export const useReactTranslation = () => {
             }
 
             throw new AppError(
-                -500,
+                statusCodes.Locked,
                 'Unknown error occurred. Please try load full page again later'
             )
         }
-    }, [])
+    }, [setContextStateValue])
 
     return {
         loadLanguages: loadLanguages,

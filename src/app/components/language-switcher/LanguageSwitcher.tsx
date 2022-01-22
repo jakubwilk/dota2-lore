@@ -40,6 +40,8 @@ export const LanguageSwitcher = ({}: ILanguageSwitcherProps) => {
         return () => {}
     }, [availableLanguages])
 
+    console.log(availableLanguages)
+
     return (
         <Fragment>
             {isOpen ? (

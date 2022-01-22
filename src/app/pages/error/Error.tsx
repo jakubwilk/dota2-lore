@@ -25,9 +25,9 @@ export const ErrorPage = ({ isActive = false, status, msg }: IErrorProps) => {
 
     return (
         <div className={styles.wrapper}>
-            <div>
-                <h2>{displayErrorCode()}</h2>
-                <p>{displayErrorMessage()}</p>
+            <div className={styles.content}>
+                <h2 className={styles.statusCode}>{displayErrorCode()}</h2>
+                <p className={styles.text}>{displayErrorMessage()}</p>
             </div>
         </div>
     )
